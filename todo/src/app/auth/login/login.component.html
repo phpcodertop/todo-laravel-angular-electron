@@ -1,0 +1,57 @@
+<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+    <div class="card card-signup">
+        <form class="form" #form="ngForm"   novalidate (submit)="loginUser(form)">
+            <div class="header header-rose text-center">
+                <h4 class="card-title">Log in</h4>
+                <div class="social-line">
+                    <a href="#pablo" class="btn btn-just-icon btn-simple">
+                        <i class="fa fa-facebook-square"></i>
+                    </a>
+                    <a href="#pablo" class="btn btn-just-icon btn-simple">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#pablo" class="btn btn-just-icon btn-simple">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                </div>
+            </div>
+            <p class="description text-center">Or Be Classical</p>
+            <div class="card-content">
+
+
+                <div class="input-group">
+									<span class="input-group-addon">
+										<i class="material-icons">email</i>
+									</span>
+                    <input type="email" pattern="^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" class="form-control" required placeholder="Email..." #email="ngModel" name="email" [(ngModel)]="emailModel">
+                    <div class="text-danger" *ngIf="email.invalid && email.dirty && !email.errors?.pattern">Email is required.</div>
+                    <div class="text-danger" *ngIf="email.invalid && email.errors?.pattern">Enter a valid Email.</div>
+                </div>
+
+                <div class="input-group">
+									<span class="input-group-addon">
+										<i class="material-icons">lock_outline</i>
+									</span>
+                    <input type="password" placeholder="Password..."  required class="form-control" #password="ngModel"  name="password" [(ngModel)]="passwordModel"/>
+                    <div class="text-danger" *ngIf="password.invalid && password.dirty">Password is required.</div>
+                </div>
+
+                <div class="input-group  col-lg-4 col-lg-offset-4">
+                    <input type="submit" value="Login" class="btn btn-primary"  [disabled]="form.invalid" />
+                </div>
+
+                <!-- If you want to add a checkbox to this form, uncomment this code
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="optionsCheckboxes" checked>
+                        Subscribe to newsletter
+                    </label>
+                </div> -->
+            </div>
+            <div class="footer text-center">
+                Don't have an account <a routerLink="/register" class="btn btn-primary btn-simple btn-wd btn-lg">Register</a>
+            </div>
+        </form>
+    </div>
+</div>

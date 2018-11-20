@@ -25,7 +25,8 @@
             "styles": [
               "src/styles.css",
               "src/assets/css/bootstrap.min.css",
-              "src/assets/css/material-kit.css"
+              "src/assets/css/material-kit.css",
+              "./node_modules/ng-snotify/styles/material.css"
             ],
             "scripts": [
               "src/assets/js/jquery.min.js",

@@ -25,6 +25,8 @@
     "awesome-typescript-loader": "^5.2.1",
     "core-js": "^2.5.4",
     "ng-cli-electron": "^6.0.0",
+    "ng-snotify": "^4.3.1",
+    "ngx-custom-validators": "^7.0.0",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"
   },
