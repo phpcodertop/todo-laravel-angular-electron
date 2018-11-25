@@ -24,7 +24,7 @@ class TasksController extends Controller
         $tasks = $user->tasks;
         if($tasks->count() <= 0)
         {
-            return response()->json(['success' => false, 'error' => "There is No Tasks"], 404);
+            return response()->json(['success' => false,'data'=> [ 'tasks' => null], 'error' => "There is No Tasks"], 200);
         }
         return response()->json(['success' => true, 'data'=> [ 'tasks' => $tasks] ], 200);
     }

@@ -25,7 +25,7 @@ class CategoriesController extends Controller
         $categories = $user->categories;
         if($categories->count() <= 0)
         {
-            return response()->json(['success' => false, 'error' => "There is No Categories"], 404);
+            return response()->json(['success' => false, 'data'=> [ 'categories' => null ], 'error' => "There is No Categories"], 200);
         }
         return response()->json(['success' => true, 'data'=> [ 'categories' => $categories] ], 200);
     }

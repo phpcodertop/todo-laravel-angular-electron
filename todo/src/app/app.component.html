@@ -1,4 +1,4 @@
-<nav class="navbar navbar-rose navbar-absolute">
+<nav class="navbar navbar-rose navbar-absolute" xmlns="http://www.w3.org/1999/html">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -59,6 +59,50 @@
         <div class="row">
             <router-outlet></router-outlet>
         </div>
+        <footer class="footer">
+            <div class="container">
+
+                <div class="copyright pull-right">
+                    © <script>document.write(new Date().getFullYear())</script>2018
+                </div>
+            </div>
+        </footer>
     </div>
 </div>
 <ng-snotify></ng-snotify>
+
+<div class="modal fade add-category"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-login">
+        <div class="modal-content">
+            <form class="form" ngForm="form" (submit)="addNewCategory(form)">
+            <div class="card card-signup card-plain">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="material-icons">clear</i></button>
+
+                    <div class="header header-primary text-center">
+                        <h4 class="card-title">Add New Category</h4>
+                    </div>
+                </div>
+
+                    <div class="card-content">
+
+                        <div class="input-group">
+								<span class="input-group-addon">
+									<i class="material-icons">face</i>
+								</span>
+                            <div class="form-group is-empty"><input type="text" class="form-control" placeholder="Category Name"><span class="material-input"></span></div>
+                        </div>
+
+
+                    </div>
+
+            </div>
+            <div class="modal-body">
+                <div class="modal-footer text-center">
+                    <input type="submit" class="btn btn-primary btn-lg" value="Add New Category" />
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>

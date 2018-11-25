@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
             err => {
                 console.log(err);
                 this.snotifyService.error('Error In Login, Please try again .');
-            };
-        )
+            },
+        );
     }
 }
